@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | CarryFi</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="sellers.html" class="nav__link">Boosters</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--small btn--outline" id="connectWallet">Connect Wallet</button>
+                    <a href="dashboard.html" class="btn btn--small btn--primary active">Dashboard</a>
+                    <button class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="dashboard">
+            <div class="container">
+                <div class="dashboard__inner">
+                    <div class="dashboard__sidebar">
+                        <div class="dashboard__user">
+                            <div class="dashboard__avatar">
+                                <img src="img/avatar-placeholder.jpg" alt="User Avatar">
+                            </div>
+                            <div class="dashboard__user-info">
+                                <h3 class="dashboard__username">Wallet User</h3>
+                                <div class="dashboard__wallet">
+                                    <i class="fas fa-wallet"></i>
+                                    <span class="wallet-address">Connect Wallet</span>
+                                </div>
+                                <div class="dashboard__balance">
+                                    <i class="fas fa-coins"></i>
+                                    <span class="wallet-balance">0 SOL</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <nav class="dashboard__nav">
+                            <ul>
+                                <li class="active"><a href="#purchased"><i class="fas fa-shopping-bag"></i> Purchased Services</a></li>
+                                <li><a href="#active"><i class="fas fa-clock"></i> Active Boosts</a></li>
+                                <li><a href="#completed"><i class="fas fa-check-circle"></i> Completed Boosts</a></li>
+                                <li><a href="#messages"><i class="fas fa-envelope"></i> Messages</a></li>
+                                <li><a href="#settings"><i class="fas fa-cog"></i> Settings</a></li>
+                            </ul>
+                        </nav>
+                        
+                        <div class="dashboard__support">
+                            <h4>Need Help?</h4>
+                            <p>Contact our support team for assistance with your boosting services.</p>
+                            <a href="#" class="btn btn--small btn--outline"><i class="fas fa-headset"></i> Contact Support</a>
+                        </div>
+                    </div>
+                    
+                    <div class="dashboard__content">
+                        <div class="dashboard__header">
+                            <h1>My Dashboard</h1>
+                            <p>Manage your boosting services and track your progress</p>
+                        </div>
+                        
+                        <div class="dashboard__stats">
+                            <div class="stat-card">
+                                <div class="stat-card__icon">
+                                    <i class="fas fa-shopping-bag"></i>
+                                </div>
+                                <div class="stat-card__content">
+                                    <h3 class="stat-card__title">Purchased</h3>
+                                    <p class="stat-card__value" id="purchased-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-card__icon">
+                                    <i class="fas fa-clock"></i>
+                                </div>
+                                <div class="stat-card__content">
+                                    <h3 class="stat-card__title">Active</h3>
+                                    <p class="stat-card__value" id="active-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-card__icon">
+                                    <i class="fas fa-check-circle"></i>
+                                </div>
+                                <div class="stat-card__content">
+                                    <h3 class="stat-card__title">Completed</h3>
+                                    <p class="stat-card__value" id="completed-count">0</p>
+                                </div>
+                            </div>
+                            
+                            <div class="stat-card">
+                                <div class="stat-card__icon">
+                                    <i class="fas fa-coins"></i>
+                                </div>
+                                <div class="stat-card__content">
+                                    <h3 class="stat-card__title">Total Spent</h3>
+                                    <p class="stat-card__value" id="total-spent">0 SOL</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__section active" id="purchased">
+                            <div class="section-header">
+                                <h2>Purchased Services</h2>
+                                <a href="services.html" class="btn btn--small btn--outline">Browse More Services</a>
+                            </div>
+                            
+                            <div class="purchased-services" id="purchased-services">
+                                <div class="empty-state" id="no-purchases">
+                                    <i class="fas fa-shopping-bag"></i>
+                                    <h3>No Purchases Yet</h3>
+                                    <p>Looks like you haven't purchased any boosting services yet.</p>
+                                    <a href="services.html" class="btn btn--primary">Browse Services</a>
+                                </div>
+                                
+                                <!-- Purchased services will be loaded here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__section" id="active">
+                            <div class="section-header">
+                                <h2>Active Boosts</h2>
+                            </div>
+                            
+                            <div class="active-boosts" id="active-boosts">
+                                <div class="empty-state" id="no-active">
+                                    <i class="fas fa-clock"></i>
+                                    <h3>No Active Boosts</h3>
+                                    <p>You don't have any active boosting services at the moment.</p>
+                                </div>
+                                
+                                <!-- Active boosts will be loaded here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__section" id="completed">
+                            <div class="section-header">
+                                <h2>Completed Boosts</h2>
+                            </div>
+                            
+                            <div class="completed-boosts" id="completed-boosts">
+                                <div class="empty-state" id="no-completed">
+                                    <i class="fas fa-check-circle"></i>
+                                    <h3>No Completed Boosts</h3>
+                                    <p>You don't have any completed boosting services yet.</p>
+                                </div>
+                                
+                                <!-- Completed boosts will be loaded here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__section" id="messages">
+                            <div class="section-header">
+                                <h2>Messages</h2>
+                            </div>
+                            
+                            <div class="messages" id="messages-list">
+                                <div class="empty-state" id="no-messages">
+                                    <i class="fas fa-envelope"></i>
+                                    <h3>No Messages</h3>
+                                    <p>You don't have any messages at the moment.</p>
+                                </div>
+                                
+                                <!-- Messages will be loaded here dynamically -->
+                            </div>
+                        </div>
+                        
+                        <div class="dashboard__section" id="settings">
+                            <div class="section-header">
+                                <h2>Account Settings</h2>
+                            </div>
+                            
+                            <div class="settings-form">
+                                <div class="form-group">
+                                    <label>Display Name</label>
+                                    <input type="text" placeholder="Enter your display name" value="Wallet User">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Profile Image</label>
+                                    <div class="profile-image-upload">
+                                        <img src="img/avatar-placeholder.jpg" alt="User Avatar">
+                                        <button class="btn btn--small btn--outline">Change Image</button>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Email (for notifications)</label>
+                                    <input type="email" placeholder="Enter your email">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Discord Username</label>
+                                    <input type="text" placeholder="Enter your Discord username">
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label>Notification Preferences</label>
+                                    <div class="checkbox-group">
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            <span>Email notifications</span>
+                                        </label>
+                                        <label class="checkbox">
+                                            <input type="checkbox" checked>
+                                            <span>In-app notifications</span>
+                                        </label>
+                                    </div>
+                                </div>
+                                
+                                <button class="btn btn--primary">Save Changes</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__info">
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                    </a>
+                    <p>Professional in-game boosting services with secure Solana payments.</p>
+                    <div class="social">
+                        <a href="https://x.com/carryfidotfun" class="social__link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">Rank Boosting</a></li>
+                            <li><a href="services.html">Duo Boosting</a></li>
+                            <li><a href="services.html">Coaching</a></li>
+                            <li><a href="services.html">Account Leveling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sellers.html">Boosters</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="sellers.html#becomeBooster">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer__column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 CarryFi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/solana.js"></script>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

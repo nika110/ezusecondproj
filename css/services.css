@@ -1,0 +1,666 @@
+/* Service Card Styles */
+.service-card {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.service-card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.3s ease;
+}
+
+.service-card:hover::before {
+    opacity: 0.05;
+}
+
+.service-card__image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.service-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover .service-card__image img {
+    transform: scale(1.05);
+}
+
+.service-card__tag {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    padding: 0.5rem 1rem;
+    background: rgba(15, 14, 19, 0.8);
+    backdrop-filter: blur(10px);
+    border-radius: var(--radius-md);
+    font-size: 1.2rem;
+    font-weight: 500;
+    z-index: 1;
+    border: 1px solid var(--color-primary);
+}
+
+.service-card__content {
+    padding: 2rem;
+}
+
+.service-card__title {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    transition: color 0.3s ease;
+}
+
+.service-card:hover .service-card__title {
+    color: var(--color-primary);
+}
+
+.service-card__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+    color: var(--color-text-muted);
+}
+
+.service-card__rating i {
+    color: #FFD700;
+    margin-right: 0.5rem;
+}
+
+.service-card__price {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 2rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.service-card__price .price {
+    font-family: var(--font-display);
+    font-size: 2.2rem;
+    font-weight: 700;
+    color: var(--color-primary);
+}
+
+/* Service details page */
+.service-details {
+    padding: 12rem 0 8rem;
+}
+
+.service-details__inner {
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    gap: 4rem;
+}
+
+.service-details__image {
+    width: 100%;
+    height: 400px;
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    margin-bottom: 4rem;
+}
+
+.service-details__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-details__content {
+    margin-bottom: 4rem;
+}
+
+.service-details__content h1 {
+    margin-bottom: 2rem;
+}
+
+.service-details__meta {
+    display: flex;
+    align-items: center;
+    margin-bottom: 3rem;
+}
+
+.service-details__meta-item {
+    display: flex;
+    align-items: center;
+    margin-right: 2rem;
+    color: var(--color-text-muted);
+}
+
+.service-details__meta-item i {
+    margin-right: 0.8rem;
+    color: var(--color-primary);
+}
+
+.service-details__description {
+    margin-bottom: 4rem;
+}
+
+.service-details__description h3 {
+    margin-bottom: 1.5rem;
+}
+
+.service-details__features {
+    margin-bottom: 4rem;
+}
+
+.service-details__features h3 {
+    margin-bottom: 1.5rem;
+}
+
+.service-details__features ul {
+    list-style: none;
+}
+
+.service-details__features li {
+    position: relative;
+    padding-left: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.service-details__features li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0.7rem;
+    width: 1.2rem;
+    height: 1.2rem;
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    border-radius: 50%;
+}
+
+.service-card__sidebar {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    padding: 3rem;
+    height: fit-content;
+    position: sticky;
+    top: 100px;
+}
+
+.service-sidebar__price {
+    font-family: var(--font-display);
+    font-size: 3.6rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 2rem;
+}
+
+.service-sidebar__features {
+    margin-bottom: 3rem;
+}
+
+.service-sidebar__feature {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.service-sidebar__feature i {
+    color: var(--color-primary);
+    margin-right: 1rem;
+}
+
+.service-sidebar__cta {
+    margin-top: 3rem;
+}
+
+.service-sidebar__cta .btn {
+    width: 100%;
+}
+
+.purchase-form__group {
+    margin-bottom: 2rem;
+}
+
+.purchase-form__label {
+    display: block;
+    margin-bottom: 0.8rem;
+    font-weight: 500;
+}
+
+.purchase-form__input,
+.purchase-form__select {
+    width: 100%;
+    padding: 1.2rem 1.5rem;
+    background-color: var(--color-bg);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+}
+
+.purchase-form__input:focus,
+.purchase-form__select:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+/* Services grid page */
+.services-header {
+    padding: 12rem 0 6rem;
+    background: linear-gradient(to bottom, var(--color-bg-dark), var(--color-bg));
+    text-align: center;
+}
+
+.services-filters {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 4rem;
+}
+
+.filter-button {
+    padding: 0.8rem 1.6rem;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    color: var(--color-text);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-button:hover, 
+.filter-button.active {
+    background-color: var(--color-primary);
+    border-color: var(--color-primary);
+}
+
+.services-search {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 5rem;
+}
+
+.services-search__input {
+    flex: 1;
+    padding: 1.5rem 2rem;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md) 0 0 var(--radius-md);
+    color: var(--color-text);
+    font-family: var(--font-primary);
+    font-size: 1.6rem;
+}
+
+.services-search__input:focus {
+    outline: none;
+    border-color: var(--color-primary);
+}
+
+.services-search__button {
+    padding: 0 2rem;
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    border: none;
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    color: var(--color-text);
+    cursor: pointer;
+}
+
+/* Seller card */
+.seller-card {
+    display: flex;
+    align-items: center;
+    padding: 2rem;
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.seller-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.seller-card__avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 2rem;
+    border: 2px solid var(--color-primary);
+}
+
+.seller-card__avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.seller-card__info {
+    flex: 1;
+}
+
+.seller-card__name {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.seller-card__rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.seller-card__rating i {
+    color: #FFD700;
+    margin-right: 0.5rem;
+}
+
+.seller-card__stats {
+    display: flex;
+    color: var(--color-text-muted);
+}
+
+.seller-card__stat {
+    margin-right: 2rem;
+}
+
+.seller-card__actions {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* Wallet styles for payments */
+.wallet-btn-wrapper {
+    position: relative;
+}
+
+.disconnect-btn {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    margin-top: 0.5rem;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 10;
+}
+
+.wallet-btn-wrapper:hover .disconnect-btn {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: all;
+}
+
+.btn--connected {
+    background: linear-gradient(90deg, var(--color-primary), var(--color-secondary));
+    color: var(--color-text);
+    border: none;
+}
+
+/* Notification system */
+.notifications {
+    position: fixed;
+    top: 2rem;
+    right: 2rem;
+    z-index: 9999;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    max-width: 350px;
+}
+
+.notification {
+    display: flex;
+    align-items: center;
+    padding: 1.5rem;
+    border-radius: var(--radius-md);
+    background-color: var(--color-bg-light);
+    box-shadow: var(--shadow-md);
+    transform: translateX(100%);
+    opacity: 0;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.notification--visible {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.notification--closing {
+    transform: translateX(100%);
+    opacity: 0;
+}
+
+.notification i {
+    font-size: 2rem;
+    margin-right: 1.5rem;
+}
+
+.notification p {
+    flex: 1;
+    margin-bottom: 0;
+}
+
+.notification__close {
+    background: none;
+    border: none;
+    color: var(--color-text-muted);
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.notification__close:hover {
+    color: var(--color-text);
+}
+
+.notification--info i {
+    color: var(--color-primary);
+}
+
+.notification--success i {
+    color: #00b894;
+}
+
+.notification--error i {
+    color: #d63031;
+}
+
+.notification--warning i {
+    color: #fdcb6e;
+}
+
+/* Reviews section */
+.service-details__reviews {
+    margin-top: 5rem;
+    padding-top: 3rem;
+    border-top: 1px solid var(--color-border);
+}
+
+.review {
+    background-color: var(--color-bg-light);
+    border-radius: var(--radius-lg);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.review:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-md);
+}
+
+.review__header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+}
+
+.review__author {
+    display: flex;
+    align-items: center;
+}
+
+.review__author img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 1.5rem;
+    object-fit: cover;
+    border: 2px solid var(--color-primary);
+}
+
+.review__author h4 {
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+}
+
+.review__rating {
+    color: #FFD700;
+}
+
+.review__date {
+    color: var(--color-text-muted);
+    font-size: 1.4rem;
+}
+
+.review__content {
+    color: var(--color-text-muted);
+    line-height: 1.7;
+}
+
+.read-more-reviews {
+    display: block;
+    margin: 3rem auto 0;
+    max-width: 200px;
+    text-align: center;
+}
+
+/* Related services */
+.related-services {
+    margin-top: 8rem;
+    padding-top: 4rem;
+    border-top: 1px solid var(--color-border);
+}
+
+/* No results section */
+.no-results {
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.no-results i {
+    font-size: 5rem;
+    color: var(--color-primary-light);
+    margin-bottom: 2rem;
+}
+
+.no-results h3 {
+    font-size: 2.4rem;
+    margin-bottom: 1rem;
+}
+
+.no-results p {
+    color: var(--color-text-muted);
+    margin-bottom: 3rem;
+}
+
+.no-results .btn {
+    display: inline-block;
+}
+
+/* CTA center */
+.cta-center {
+    text-align: center;
+    margin-top: 4rem;
+}
+
+/* Mobile styles for service details */
+@media (max-width: 992px) {
+    .service-details__inner {
+        grid-template-columns: 1fr;
+    }
+    
+    .service-details__main {
+        order: 2;
+    }
+    
+    .service-card__sidebar {
+        order: 1;
+        margin-bottom: 4rem;
+    }
+    
+    .review__header {
+        flex-direction: column;
+    }
+    
+    .review__date {
+        margin-top: 1rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .service-details__meta {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .service-details__meta-item {
+        margin-bottom: 1rem;
+    }
+    
+    .review__author {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .review__author img {
+        margin-right: 0;
+        margin-bottom: 1rem;
+    }
+    
+    .service-card__price {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.5rem;
+    }
+    
+    .seller-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .seller-card__avatar {
+        margin-right: 0;
+        margin-bottom: 1.5rem;
+    }
+    
+    .seller-card__stats {
+        justify-content: center;
+    }
+}
+
+
+.popular-boosters{
+    padding-top: 65px;
+}

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booster Profile | CarryFi</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/booster-details.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="sellers.html" class="nav__link active">Boosters</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--small btn--outline" id="connectWallet">Connect Wallet</button>
+                    <button class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="booster-hero">
+            <div class="container">
+                <div class="booster-hero__inner">
+                    <div class="booster-profile">
+                        <div class="booster-profile__image">
+                            <img src="" alt="Booster Profile" id="boosterImage">
+                            <div class="booster-badge">
+                                <i class="fas fa-crown"></i>
+                                <span>Elite</span>
+                            </div>
+                        </div>
+                        <div class="booster-profile__info">
+                            <h1 id="boosterName"></h1>
+                            <div class="booster-meta">
+                                <div class="booster-meta__item">
+                                    <i class="fas fa-star"></i>
+                                    <span id="boosterRating"></span>
+                                    <span>Rating</span>
+                                </div>
+                                <div class="booster-meta__item">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span id="totalOrders"></span>
+                                    <span>Orders</span>
+                                </div>
+                                <div class="booster-meta__item">
+                                    <i class="fas fa-clock"></i>
+                                    <span id="responseTime"></span>
+                                    <span>Response</span>
+                                </div>
+                            </div>
+                            <div class="booster-specializations">
+                                <h3>Specializes in:</h3>
+                                <div class="booster-games" id="boosterGames">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booster-about">
+            <div class="container">
+                <div class="booster-about__inner">
+                    <div class="booster-about__content">
+                        <h2>About Me</h2>
+                        <p id="aboutMe"></p>
+                        
+                        <h3>Skills & Achievements</h3>
+                        <div class="booster-achievements" id="boosterAchievements">
+
+                        </div>
+                    </div>
+                    <div class="booster-stats">
+                        <h2>Performance Stats</h2>
+                        <div class="stat-bars" id="performanceStats">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="booster-services">
+            <div class="container">
+                <h2 class="section-title">Services Offered</h2>
+                <div class="services-grid" id="boosterServices">
+                    
+                         
+                </div>
+            </div>
+        </section>
+
+        <section class="booster-reviews">
+            <div class="container">
+                <h2 class="section-title">Customer Reviews</h2>
+                <div class="reviews-container" id="boosterReviews_NONE">
+                    <div class="no-reviews-state">
+                        <div class="no-reviews-icon">
+                            <i class="fas fa-star-half-alt"></i>
+                        </div>
+                        <h3>Be the First to Review!</h3>
+                        <p>This booster is awaiting their first review. After your boosting experience, share your feedback to help others make informed decisions.</p>
+                        <button class="btn btn--primary btn--medium">
+                            <i class="fas fa-pen"></i> Write a Review
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- <div class="pagination">
+                    <button class="pagination-btn active">1</button>
+                    <button class="pagination-btn">2</button>
+                    <button class="pagination-btn">3</button>
+                    <button class="pagination-btn"><i class="fas fa-ellipsis-h"></i></button>
+                </div> -->
+            </div>
+        </section>
+
+        <section class="cta">
+            <div class="container">
+                <div class="cta__inner">
+                    <h2 class="cta__title">Ready to Get Boosted?</h2>
+                    <p class="cta__subtitle">Start your journey with NightHawk today and achieve your gaming goals</p>
+                    <a href="#" class="btn btn--large btn--primary">Contact This Booster</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__info">
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                    </a>
+                    <p>Professional in-game boosting services with secure Solana payments.</p>
+                    <div class="social">
+                        <a href="https://x.com/carryfidotfun" class="social__link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">Rank Boosting</a></li>
+                            <li><a href="services.html">Duo Boosting</a></li>
+                            <li><a href="services.html">Coaching</a></li>
+                            <li><a href="services.html">Account Leveling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sellers.html">Boosters</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="sellers.html#becomeBooster">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer__column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 CarryFi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/booster-details.js"></script>
+</body>
+</html>

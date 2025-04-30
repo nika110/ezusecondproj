@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Services | CarryFi</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link active">Services</a></li>
+                        <li class="nav__item"><a href="sellers.html" class="nav__link">Boosters</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--small btn--outline" id="connectWallet">Connect Wallet</button>
+                    <button class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="services-header">
+            <div class="container">
+                <h1 class="services-header__title">Boosting Services</h1>
+                <p class="services-header__subtitle">Find the perfect boosting service to level up your game</p>
+                
+                <div class="services-search">
+                    <input type="text" class="services-search__input" placeholder="Search for services...">
+                    <button class="services-search__button"><i class="fas fa-search"></i></button>
+                </div>
+                
+                <div class="services-filters">
+                    <button class="filter-button active" data-filter="all">All Games</button>
+                    <button class="filter-button" data-filter="lol">League of Legends</button>
+                    <button class="filter-button" data-filter="valorant">Valorant</button>
+                    <button class="filter-button" data-filter="fortnite">Fortnite</button>
+                    <button class="filter-button" data-filter="dota">Dota 2</button>
+                    <button class="filter-button" data-filter="csgo">CS 2</button>
+                </div>
+            </div>
+        </section>
+        
+        <section class="all-services">
+            <div class="container">
+                <div class="services__grid" id="services-grid">
+                    <!-- Service cards will be populated with JavaScript -->
+                </div>
+            </div>
+        </section>
+        
+        <section class="popular-boosters">
+            <div class="container">
+                <h2 class="section-title">Top Boosters</h2>
+                <div class="boosters-wrapper">
+                    <div class="seller-card">
+                        <div class="seller-card__avatar">
+                            <img src="assets/images/leagueOfLegends.webp" alt="ProGamer123">
+                        </div>
+                        <div class="seller-card__info">
+                            <h3 class="seller-card__name">KingKong</h3>
+                            <div class="seller-card__rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (2 reviews)</span>
+                            </div>
+                            <div class="seller-card__stats">
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>3 Jobs Completed</span>
+                                </div>
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>League of Legends, Valorant</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card__actions">
+                            <a href="booster-details.html?username=KingKong" class="btn btn--small btn--primary">View Profile</a>
+                            <a href="booster-details.html?username=KingKong" class="btn btn--small btn--outline">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <div class="seller-card">
+                        <div class="seller-card__avatar">
+                            <img src="assets/images/fortnite.jpg" alt="EliteBooster">
+                        </div>
+                        <div class="seller-card__info">
+                            <h3 class="seller-card__name">FortKnight</h3>
+                            <div class="seller-card__rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (1 reviews)</span>
+                            </div>
+                            <div class="seller-card__stats">
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>1 Jobs Completed</span>
+                                </div>
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Fortnite</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card__actions">
+                            <a href="booster-details.html?username=FortKnight" class="btn btn--small btn--primary">View Profile</a>
+                            <a href="booster-details.html?username=FortKnight" class="btn btn--small btn--outline">Contact</a>
+                        </div>
+                    </div>
+                    
+                    <div class="seller-card">
+                        <div class="seller-card__avatar">
+                            <img src="assets/images/dota2.jpg" alt="Dota_Expert">
+                        </div>
+                        <div class="seller-card__info">
+                            <h3 class="seller-card__name">Dota_Expert
+                            </h3>
+                            <div class="seller-card__rating">
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (1 reviews)</span>
+                            </div>
+                            <div class="seller-card__stats">
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-check-circle"></i>
+                                    <span>2 Jobs Completed</span>
+                                </div>
+                                <div class="seller-card__stat">
+                                    <i class="fas fa-gamepad"></i>
+                                    <span>Dota 2</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="seller-card__actions">
+                            <a href="booster-details.html?username=Dota_Expert" class="btn btn--small btn--primary">View Profile</a>
+                            <a href="booster-details.html?username=Dota_Expert" class="btn btn--small btn--outline">Contact</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="cta-center" style="padding-bottom: 50px;">
+                    <a href="sellers.html" class="btn btn--large btn--outline">View All Boosters</a>
+                </div>
+            </div>
+        </section>
+        
+        <section class="cta">
+            <div class="container">
+                <div class="cta__inner">
+                    <h2 class="cta__title">Become a Booster</h2>
+                    <p class="cta__subtitle">Use your gaming skills to earn real money with Solana payments</p>
+                    <a href="sellers.html#becomeBooster" class="btn btn--large btn--primary">Join as Booster</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__info">
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                    </a>
+                    <p>Professional in-game boosting services with secure Solana payments.</p>
+                    <div class="social">
+                        <a href="https://x.com/carryfidotfun" class="social__link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">Rank Boosting</a></li>
+                            <li><a href="services.html">Duo Boosting</a></li>
+                            <li><a href="services.html">Coaching</a></li>
+                            <li><a href="services.html">Account Leveling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sellers.html">Boosters</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="sellers.html#becomeBooster">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer__column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 CarryFi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/solana.js"></script>
+    <script src="js/services.js"></script>
+</body>
+</html>

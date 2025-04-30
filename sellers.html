@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Top Boosters | CarryFi</title>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/services.css">
+    <link rel="stylesheet" href="css/sellers.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <header class="header">
+        <div class="container">
+            <div class="header__inner">
+                <a href="index.html" class="logo">
+                    <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                </a>
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
+                        <li class="nav__item"><a href="services.html" class="nav__link">Services</a></li>
+                        <li class="nav__item"><a href="sellers.html" class="nav__link active">Boosters</a></li>
+                        <li class="nav__item"><a href="about.html" class="nav__link">About</a></li>
+                    </ul>
+                </nav>
+                <div class="header__actions">
+                    <button class="btn btn--small btn--outline" id="connectWallet">Connect Wallet</button>
+                    <button class="burger" id="burger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- <section class="sellers-header">
+            <div class="container">
+                <h1 class="sellers-header__title">Elite Boosting Team</h1>
+                <p class="sellers-header__subtitle">Meet our professional boosters who will level up your gaming experience</p>
+                
+                <div class="sellers-filters">
+                    <div class="sellers-search">
+                        <input type="text" class="sellers-search__input" placeholder="Search for boosters...">
+                        <button class="sellers-search__button"><i class="fas fa-search"></i></button>
+                    </div>
+                    
+                    <div class="game-filters">
+                        <button class="game-filter active" data-game="all">All Games</button>
+                        <button class="game-filter" data-game="lol">League of Legends</button>
+                        <button class="game-filter" data-game="valorant">Valorant</button>
+                        <button class="game-filter" data-game="wow">World of Warcraft</button>
+                        <button class="game-filter" data-game="fortnite">Fortnite</button>
+                        <button class="game-filter" data-game="dota">Dota 2</button>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <!-- <section class="featured-boosters">
+            <div class="container">
+                <h2 class="section-title">Top Rated Boosters</h2>
+                <div class="featured-grid">
+                    <div class="featured-booster">
+                        <div class="featured-booster__badge">
+                            <i class="fas fa-crown"></i> Top Ranked
+                        </div>
+                        <div class="featured-booster__avatar">
+                            <img src="img/boosters/featured-1.jpg" alt="EliteGamer99">
+                        </div>
+                        <div class="featured-booster__info">
+                            <h3>EliteGamer99</h3>
+                            <div class="featured-booster__games">
+                                <span>League of Legends</span>
+                                <span>Valorant</span>
+                            </div>
+                            <div class="featured-booster__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <span>5.0 (237 reviews)</span>
+                            </div>
+                            <p class="featured-booster__desc">Challenger player with over 5 years of boosting experience. Specializes in mid and jungle roles.</p>
+                            <div class="featured-booster__stats">
+                                <div class="stat">
+                                    <h4>356</h4>
+                                    <p>Jobs Completed</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>98%</h4>
+                                    <p>Success Rate</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>24h</h4>
+                                    <p>Response Time</p>
+                                </div>
+                            </div>
+                            <a href="booster-profile.html?id=elitegamer99" class="btn btn--primary">View Profile</a>
+                        </div>
+                    </div>
+
+                    <div class="featured-booster">
+                        <div class="featured-booster__badge">
+                            <i class="fas fa-bolt"></i> Fast Delivery
+                        </div>
+                        <div class="featured-booster__avatar">
+                            <img src="img/boosters/featured-2.jpg" alt="ProBooster">
+                        </div>
+                        <div class="featured-booster__info">
+                            <h3>ProBooster</h3>
+                            <div class="featured-booster__games">
+                                <span>World of Warcraft</span>
+                                <span>Dota 2</span>
+                            </div>
+                            <div class="featured-booster__rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                                <span>4.8 (195 reviews)</span>
+                            </div>
+                            <p class="featured-booster__desc">Former esports professional with deep knowledge of high-end raid content and competitive PvP.</p>
+                            <div class="featured-booster__stats">
+                                <div class="stat">
+                                    <h4>298</h4>
+                                    <p>Jobs Completed</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>95%</h4>
+                                    <p>Success Rate</p>
+                                </div>
+                                <div class="stat">
+                                    <h4>12h</h4>
+                                    <p>Response Time</p>
+                                </div>
+                            </div>
+                            <a href="booster-profile.html?id=probooster" class="btn btn--primary">View Profile</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section> -->
+        
+        <section class="all-boosters">
+            <div class="container">
+                <h2 class="section-title">All Boosters</h2>
+                <div class="boosters-grid" id="boosters-grid">
+                    <!-- Booster cards will be populated with JavaScript -->
+                </div>
+                <!-- <div class="pagination">
+                    <button class="pagination__btn pagination__btn--prev disabled"><i class="fas fa-chevron-left"></i></button>
+                    <div class="pagination__numbers">
+                        <button class="pagination__number active">1</button>
+                        <button class="pagination__number">2</button>
+                        <button class="pagination__number">3</button>
+                        <span class="pagination__dots">...</span>
+                        <button class="pagination__number">10</button>
+                    </div>
+                    <button class="pagination__btn pagination__btn--next"><i class="fas fa-chevron-right"></i></button>
+                </div> -->
+            </div>
+        </section>
+        
+        <section class="become-booster" id="becomeBooster">
+            <div class="container">
+                <div class="become-booster__inner">
+                    <div class="become-booster__content">
+                        <h2>Become a Booster</h2>
+                        <p>Turn your gaming skills into earnings. Join our team of professional boosters and get paid in Solana for doing what you love.</p>
+                        <ul class="become-booster__benefits">
+                            <li><i class="fas fa-check-circle"></i> Flexible working hours</li>
+                            <li><i class="fas fa-check-circle"></i> Competitive pay rates</li>
+                            <li><i class="fas fa-check-circle"></i> Instant payouts in Solana</li>
+                            <li><i class="fas fa-check-circle"></i> Build your professional profile</li>
+                        </ul>
+                        <a href="become-booster.html" class="btn btn--large btn--primary" id="applyNow">Apply Now</a>
+                    </div>
+                    <div class="become-booster__image" id="howToApply">
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <div class="footer__info">
+                    <a href="index.html" class="logo">
+                        <span class="logo__text">Carry<span class="accent">Fi</span></span>
+                    </a>
+                    <p>Professional in-game boosting services with secure Solana payments.</p>
+                    <div class="social">
+                        <a href="https://x.com/carryfidotfun" class="social__link"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer__links">
+                    <div class="footer__column">
+                        <h3>Services</h3>
+                        <ul>
+                            <li><a href="services.html">Rank Boosting</a></li>
+                            <li><a href="services.html">Duo Boosting</a></li>
+                            <li><a href="services.html">Coaching</a></li>
+                            <li><a href="services.html">Account Leveling</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer__column">
+                        <h3>Company</h3>
+                        <ul>
+                            <li><a href="about.html">About Us</a></li>
+                            <li><a href="sellers.html">Boosters</a></li>
+                            <li><a href="services.html">Services</a></li>
+                            <li><a href="sellers.html#becomeBooster">Careers</a></li>
+                        </ul>
+                    </div>
+                    <!-- <div class="footer__column">
+                        <h3>Support</h3>
+                        <ul>
+                            <li><a href="#">Contact Us</a></li>
+                            <li><a href="#">FAQ</a></li>
+                            <li><a href="#">Terms of Service</a></li>
+                            <li><a href="#">Privacy Policy</a></li>
+                        </ul>
+                    </div> -->
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 CarryFi. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://unpkg.com/@solana/web3.js@latest/lib/index.iife.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/solana.js"></script>
+    <script src="js/sellers.js"></script>
+    
+    <script>
+        document.getElementById('applyNow').addEventListener('click', function(e) {
+            e.preventDefault(); // Prevent navigation to become-booster.html
+            const howToApply = document.getElementById('howToApply');
+            howToApply.innerHTML = '<div class="email-info"><h3>Contact Us</h3><p>Send your application to: <a href="mailto:join@carryfi.com">Team@carryfi.fun</a></p><p>Our team will review your application and contact you shortly.</p></div>';
+            howToApply.scrollIntoView({ behavior: 'smooth' });
+            // howToApply.style.removeProperty('zoom');
+            howToApply.classList.add('no-after-bg');
+        });
+    </script>
+</body>
+</html>

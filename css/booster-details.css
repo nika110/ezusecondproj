@@ -1,0 +1,559 @@
+/* Booster Details Page Styles */
+
+/* Hero Section */
+.booster-hero {
+    padding: 120px 0 60px;
+    background: linear-gradient(to bottom, rgba(16, 16, 28, 1), rgba(23, 23, 40, 0.9));
+    position: relative;
+    overflow: hidden;
+}
+
+.booster-hero::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('../assets/images/grid-bg.png');
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.booster-profile {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
+.booster-profile__image {
+    position: relative;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    border: 4px solid var(--accent-color);
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(83, 92, 245, 0.5);
+}
+
+.booster-profile__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.booster-badge {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    background: var(--accent-color);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+.booster-profile__info {
+    flex: 1;
+}
+
+.booster-profile__info h1 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(83, 92, 245, 0.7);
+}
+
+.booster-meta {
+    display: flex;
+    gap: 25px;
+    margin-bottom: 20px;
+}
+
+.booster-meta__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 10px;
+    backdrop-filter: blur(5px);
+}
+
+.booster-meta__item i {
+    color: var(--accent-color);
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.booster-meta__item span:first-of-type {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.booster-meta__item span:last-of-type {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.booster-specializations {
+    margin-top: 20px;
+}
+
+.booster-specializations h3 {
+    font-size: 16px;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 10px;
+}
+
+.booster-games {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.game-tag {
+    background: rgba(83, 92, 245, 0.2);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 14px;
+    border: 1px solid var(--accent-color);
+    transition: all 0.3s ease;
+}
+
+.game-tag:hover {
+    background: rgba(83, 92, 245, 0.4);
+    transform: translateY(-2px);
+}
+
+/* About Section */
+.booster-about {
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+
+.booster-about__inner {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 40px;
+}
+
+.booster-about__content h2, 
+.booster-stats h2 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 28px;
+    color: #fff;
+    margin-bottom: 20px;
+    border-bottom: 2px solid var(--accent-color);
+    padding-bottom: 10px;
+    display: inline-block;
+}
+
+.booster-about__content p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 16px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.booster-about__content h3 {
+    font-size: 20px;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.booster-achievements {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.achievement {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.achievement:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateX(5px);
+}
+
+.achievement i {
+    color: gold;
+    font-size: 18px;
+}
+
+.achievement span {
+    color: #fff;
+    font-size: 15px;
+}
+
+.booster-stats {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 30px;
+    border-radius: 12px;
+    backdrop-filter: blur(5px);
+}
+
+.stat-bars {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.stat-bar__label {
+    color: #fff;
+    font-size: 14px;
+    margin-bottom: 8px;
+}
+
+.stat-bar__track {
+    background: rgba(255, 255, 255, 0.1);
+    height: 12px;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.stat-bar__fill {
+    background: linear-gradient(to right, #535cf5, #8a94fc);
+    height: 100%;
+    border-radius: 6px;
+    text-align: right;
+    font-size: 10px;
+    color: #fff;
+    padding-right: 5px;
+    line-height: 12px;
+    transition: width 1.5s ease-in-out;
+}
+
+/* Services Section */
+.booster-services {
+    padding: 80px 0;
+    background-color: rgba(16, 16, 28, 0.8);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.service-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 30px;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    border: 1px solid rgba(83, 92, 245, 0.2);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 30px rgba(83, 92, 245, 0.2);
+    border-color: rgba(83, 92, 245, 0.5);
+}
+
+.service-card__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 15px;
+}
+
+.service-card h3 {
+    font-family: 'Orbitron', sans-serif;
+    font-size: 20px;
+    color: #fff;
+}
+
+.service-price {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+}
+
+.price {
+    color: var(--accent-color);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.service-card p {
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.service-features {
+    list-style: none;
+    margin-bottom: 20px;
+    flex-grow: 1;
+}
+
+.service-features li {
+    color: #fff;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.service-features li i {
+    color: var(--accent-color);
+}
+
+.service-card .btn {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+/* Reviews Section */
+.booster-reviews {
+    padding: 80px 0;
+    background-color: var(--bg-dark);
+}
+
+.reviews-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.review-card {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    padding: 25px;
+    transition: all 0.3s ease;
+}
+
+.review-card:hover {
+    background: rgba(255, 255, 255, 0.08);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.reviewer-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.reviewer-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.reviewer-info h4 {
+    color: #fff;
+    font-size: 16px;
+    margin-bottom: 5px;
+}
+
+.review-stars {
+    color: gold;
+    font-size: 14px;
+}
+
+.review-date {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+}
+
+.review-text {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.review-game {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 8px 15px;
+    border-radius: 20px;
+    width: fit-content;
+}
+
+.review-game img {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+}
+
+.review-game span {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 40px;
+}
+
+.pagination-btn {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.pagination-btn.active,
+.pagination-btn:hover {
+    background: var(--accent-color);
+}
+
+/* CTA Section */
+.cta {
+    background-color: rgba(23, 23, 40, 0.95);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at center, rgba(83, 92, 245, 0.2) 0%, transparent 70%);
+    pointer-events: none;
+}
+
+/* No Reviews State Styling */
+.no-reviews-state {
+    background: linear-gradient(135deg, rgba(30, 30, 50, 0.8), rgba(20, 20, 40, 0.9));
+    border-radius: 12px;
+    padding: 3.5rem 2rem;
+    text-align: center;
+    margin: 2rem 0;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.no-reviews-icon {
+    font-size: 4rem;
+    margin-bottom: 1.5rem;
+    color: var(--accent-color);
+    animation: pulse 2s infinite;
+}
+
+.no-reviews-state h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(to right, #9c7eee, #43b4f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+}
+
+.no-reviews-state p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.8);
+    margin-bottom: 2rem;
+    max-width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.no-reviews-state .btn {
+    padding: 0.8rem 1.5rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.no-reviews-state .btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 7px 20px rgba(67, 180, 249, 0.3);
+}
+
+.no-reviews-state .btn i {
+    margin-right: 6px;
+}
+
+@keyframes pulse {
+    0% {
+        opacity: 0.6;
+        transform: scale(0.97);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.03);
+    }
+    100% {
+        opacity: 0.6;
+        transform: scale(0.97);
+    }
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+    .booster-about__inner {
+        grid-template-columns: 1fr;
+    }
+    
+    .booster-profile {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .booster-meta {
+        justify-content: center;
+    }
+    
+    .booster-games {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .booster-profile__image {
+        width: 150px;
+        height: 150px;
+    }
+    
+    .booster-profile__info h1 {
+        font-size: 32px;
+    }
+    
+    .reviews-container {
+        grid-template-columns: 1fr;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+}

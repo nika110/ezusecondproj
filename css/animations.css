@@ -1,0 +1,395 @@
+/* Glitch effect for hero title */
+.glitch {
+    position: relative;
+    color: var(--color-text);
+}
+
+.glitch::before,
+.glitch::after {
+    content: attr(data-text);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--color-bg);
+    clip-path: polygon(0 0, 100% 0, 100% 45%, 0 45%);
+}
+
+.glitch::before {
+    left: -2px;
+    text-shadow: 2px 0 var(--color-primary);
+    animation: glitch-animation-1 2s infinite linear alternate-reverse;
+}
+
+.glitch::after {
+    left: 2px;
+    text-shadow: -2px 0 var(--color-secondary);
+    animation: glitch-animation-2 3s infinite linear alternate-reverse;
+}
+
+@keyframes glitch-animation-1 {
+    0% {
+        clip-path: inset(70% 0 11% 0);
+    }
+    5% {
+        clip-path: inset(31% 0 40% 0);
+    }
+    10% {
+        clip-path: inset(54% 0 18% 0);
+    }
+    15% {
+        clip-path: inset(9% 0 71% 0);
+    }
+    20% {
+        clip-path: inset(14% 0 13% 0);
+    }
+    25% {
+        clip-path: inset(95% 0 6% 0);
+    }
+    30% {
+        clip-path: inset(87% 0 11% 0);
+    }
+    35% {
+        clip-path: inset(100% 0 1% 0);
+    }
+    40% {
+        clip-path: inset(47% 0 0% 0);
+    }
+    45% {
+        clip-path: inset(20% 0 66% 0);
+    }
+    50% {
+        clip-path: inset(24% 0 47% 0);
+    }
+    55% {
+        clip-path: inset(1% 0 99% 0);
+    }
+    60% {
+        clip-path: inset(86% 0 13% 0);
+    }
+    65% {
+        clip-path: inset(11% 0 12% 0);
+    }
+    70% {
+        clip-path: inset(65% 0 35% 0);
+    }
+    75% {
+        clip-path: inset(23% 0 54% 0);
+    }
+    80% {
+        clip-path: inset(67% 0 7% 0);
+    }
+    85% {
+        clip-path: inset(88% 0 12% 0);
+    }
+    90% {
+        clip-path: inset(40% 0 23% 0);
+    }
+    95% {
+        clip-path: inset(99% 0 1% 0);
+    }
+    100% {
+        clip-path: inset(97% 0 3% 0);
+    }
+}
+
+@keyframes glitch-animation-2 {
+    0% {
+        clip-path: inset(68% 0 12% 0);
+    }
+    5% {
+        clip-path: inset(32% 0 36% 0);
+    }
+    10% {
+        clip-path: inset(15% 0 42% 0);
+    }
+    15% {
+        clip-path: inset(63% 0 3% 0);
+    }
+    20% {
+        clip-path: inset(41% 0 28% 0);
+    }
+    25% {
+        clip-path: inset(72% 0 28% 0);
+    }
+    30% {
+        clip-path: inset(31% 0 41% 0);
+    }
+    35% {
+        clip-path: inset(8% 0 71% 0);
+    }
+    40% {
+        clip-path: inset(88% 0 12% 0);
+    }
+    45% {
+        clip-path: inset(51% 0 21% 0);
+    }
+    50% {
+        clip-path: inset(31% 0 69% 0);
+    }
+    55% {
+        clip-path: inset(58% 0 12% 0);
+    }
+    60% {
+        clip-path: inset(13% 0 87% 0);
+    }
+    65% {
+        clip-path: inset(49% 0 51% 0);
+    }
+    70% {
+        clip-path: inset(49% 0 17% 0);
+    }
+    75% {
+        clip-path: inset(24% 0 4% 0);
+    }
+    80% {
+        clip-path: inset(35% 0 65% 0);
+    }
+    85% {
+        clip-path: inset(31% 0 34% 0);
+    }
+    90% {
+        clip-path: inset(8% 0 92% 0);
+    }
+    95% {
+        clip-path: inset(71% 0 29% 0);
+    }
+    100% {
+        clip-path: inset(28% 0 72% 0);
+    }
+}
+
+/* Floating animations for the badges */
+.floating-badge {
+    animation: float 5s ease-in-out infinite;
+}
+
+.floating-badge--1 {
+    animation-delay: 0s;
+}
+
+.floating-badge--2 {
+    animation-delay: 1.5s;
+}
+
+.floating-badge--3 {
+    animation-delay: 3s;
+}
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-15px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+/* Pulsating effect for buttons */
+.btn--primary {
+    animation: pulse 3s infinite;
+}
+
+@keyframes pulse {
+    0% {
+        box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(108, 92, 231, 0.7);
+    }
+    100% {
+        box-shadow: 0 4px 15px rgba(108, 92, 231, 0.4);
+    }
+}
+
+/* Ripple effect for game cards */
+.game-card {
+    position: relative;
+    overflow: hidden;
+}
+
+.game-card::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    pointer-events: none;
+    transition: width 0.8s, height 0.8s, opacity 0.8s;
+}
+
+.game-card:hover::after {
+    width: 300px;
+    height: 300px;
+    opacity: 1;
+}
+
+/* Appear animations for sections when scrolling */
+.fade-in {
+    transform: translateY(30px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-left.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.fade-in-right.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Step number animations */
+.step__number {
+    position: relative;
+    overflow: hidden;
+}
+
+.step__number::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.2);
+    z-index: 1;
+    animation: rotate 6s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Hover animations */
+.social__link i {
+    transition: transform 0.3s ease;
+}
+
+.social__link:hover i {
+    transform: rotate(360deg);
+}
+
+/* Neon glow effect for headings */
+.section-title {
+    text-shadow: 0 0 5px rgba(108, 92, 231, 0.3);
+    animation: neon 3s ease-in-out infinite alternate;
+}
+
+@keyframes neon {
+    from {
+        text-shadow: 0 0 5px rgba(108, 92, 231, 0.3);
+    }
+    to {
+        text-shadow: 0 0 15px rgba(108, 92, 231, 0.5), 0 0 25px rgba(108, 92, 231, 0.3);
+    }
+}
+
+/* Loading spinner animation */
+.spinner {
+    width: 40px;
+    height: 40px;
+    border: 3px solid rgba(108, 92, 231, 0.2);
+    border-top-color: var(--color-primary);
+    border-radius: 50%;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Shimmer effect for cards on hover */
+.game-card__image img {
+    transition: filter 0.5s ease;
+}
+
+.game-card:hover .game-card__image img {
+    filter: brightness(1.2) drop-shadow(0 0 20px rgba(108, 92, 231, 0.7));
+}
+
+/* Background grid animation */
+.hero__grid {
+    animation: gridMove 30s linear infinite;
+}
+
+@keyframes gridMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 30px 30px;
+    }
+}
+
+/* Custom cursor animations */
+.cursor.hover {
+    transform: scale(1.5);
+    background-color: var(--color-secondary);
+}
+
+.cursor-follower.hover {
+    transform: scale(1.5);
+    border-color: var(--color-secondary);
+    background-color: rgba(0, 206, 201, 0.1);
+}
+
+/* Typewriter effect */
+.typewriter {
+    overflow: hidden;
+    white-space: nowrap;
+    border-right: 2px solid var(--color-primary);
+    animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes blink-caret {
+    from, to {
+        border-color: transparent;
+    }
+    50% {
+        border-color: var(--color-primary);
+    }
+}
